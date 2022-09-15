@@ -13,6 +13,35 @@ int main()
 {
     //program I : char practice
     char symbol1, symbol2, symbol3;
+    int number = (1 / 3) * 3;
+    double c = 20;
+    double f;
+
+    // Example B
+    f = (9 / 5) * c + 32.1;
+    cout << "the temp is: " << f << endl;
+    // Example B end
+
+    // Example A
+    int q = 2;
+    cout << "start " << endl;
+    if (q <= 3)
+        if (q != 0)
+            cout << "Hello from the second if." << endl;
+        else
+            cout << "Hello from the else." << endl;
+    cout << "End." << endl;
+
+    cout << "Start again." << endl;
+    if (q > 3)
+        if (q != 0)
+            cout << "Hello from the second 2nd if." << endl;
+        else
+            cout << "Hello from the second else." << endl;
+    cout << "End again." << endl;
+    // Example A end
+
+    cout << "the number is: " << number << endl;
     cout << "Enter two initials, without any periods:\n";
     cin >> symbol1 >> symbol2;
     cout << "The two initials are:\n";
