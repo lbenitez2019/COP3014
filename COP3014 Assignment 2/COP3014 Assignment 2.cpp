@@ -60,6 +60,11 @@ int main()
 
     // Loop counter
     int lc = 1;         // incremented until it reaches total months in loan 
+    
+    // Table header
+    cout << "--------------------------------------------" << endl;
+    cout << "|Mth|  Int Pmt.  |  Pr Pmt.   |  Rem Bal.  |" << endl;
+    cout << "--------------------------------------------" << endl;
 
     // Display and tabulation loop 
     while (lc <= n)
@@ -67,10 +72,17 @@ int main()
         ip = r * rm;    // calculate interest payment for this month
         pp = M - ip;    // calculate principal payment for this month
         rm -= pp;       // update the remaining balance, deduct principal
-        cout << "Mth:" << lc << setw(10) << " Int:$" << ip << setw(10) << " Ppl:$" << pp << setw(10) << " Rem:$" << rm << endl;
+        // cout << "Mth:" << lc << setw(10) << " Int:$" << ip << setw(10) << " Ppl:$" << pp << setw(10) << " Rem:$" << rm << endl;
+        setfill('.');
+
+        cout << setfill(' ') << setw(3) << lc;
+        cout << "  $" << setfill(' ') << setw(10) << ip;
+        cout << "  $" << setfill(' ') << setw(10) << pp;
+        cout << "  $" << setfill(' ') << setw(10) << rm << endl;
         
         lc++;           // increment loop counter (month)
     }
+
 
     return 0;
 }
