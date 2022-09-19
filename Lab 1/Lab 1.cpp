@@ -17,15 +17,15 @@ int main()
     double h;  // Height (in)
     double w;  // Weight (lbs)
     double a;  // Age (yrs)
-    double hs; // Hat size
-    double js; // Jacket size
-    double ws; // Waist size
-    int af;    // Adjustment factor
+    double hs; // Hat size (computed)
+    double js; // Jacket size (computed)
+    double ws; // Waist size (computed)
+    int af;    // Adjustment factor (needed for intermediate computation)
 
-    int lc = 1; // Loop control
-    while (lc == 1)
+    char lc = 'y'; // Outer loop control
+    while (lc == 'y' || lc == 'Y')
     {
-        // Prompt for h, w, and a
+        // Prompt for inputs h, w, and a
         cout << "Height (in): ";
         cin >> h;
         cout << "Weight (lbs): ";
@@ -33,23 +33,48 @@ int main()
         cout << "Age (yrs): ";
         cin >> a;
         
+        
+        int lc2 = a + 20; // inner loop control = input age + 10 years. 
+        
+        // Table Header
+        cout << "---------------------------------------------" << endl;
+        cout << "| Age | Hat Size | Jacket Size | Waist Size | " << endl;
+        cout << "---------------------------------------------" << endl;
+
+        while(a<=lc2)
+        {
         // Calc Hat Size
         hs = w / h * 2.9;
-        cout << "Hat Size: " << hs << endl;
 
         // Calc Jacket Size
         af = ((a - 30) / 10);
-        cout << "af1 = " << af << endl;
         js = (h * w / 288.0) + (af / 8.0);
-        cout << "Jacket Size: " << js << endl;
 
         // Calc Waist Size
         af = ((a - 28) / 2);
-        cout << "af2 = " << af << endl;
         ws = (w / 5.7) + (af / 10.0);
-        cout << "Waist Size: " << ws << endl;
 
-        cout << "Continue? (1=yes, 0=no) ";
+        // Specify NO fixed notation or decimal point only for age
+        cout.unsetf(ios::fixed);
+        cout.unsetf(ios::showpoint);
+
+        // Print out age
+        cout << setfill(' ') << setw(5) << a;   
+        
+        // Set numerical format for table to decimal point w/ 2 siggnificant digits
+        cout.setf(ios::fixed);
+        cout.setf(ios::showpoint);
+        cout.precision(2);
+
+        // Print out Hat/Jacket/Waist size
+        cout << setfill(' ') << setw(10) << hs;
+        cout << setfill(' ') << setw(13) << js;
+        cout << setfill(' ') << setw(13) << ws << endl;
+
+        a += 1; // increment age by 1
+        }
+
+        cout << "Continue? (y/n) ";
         cin >> lc;
     }
 
