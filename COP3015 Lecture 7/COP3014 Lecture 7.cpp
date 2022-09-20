@@ -8,6 +8,7 @@ Taken from : "Problem Solving with C++", by Walter Savitch
 #include <iostream>
 using namespace std;
 
+// -- Prototype Declarations. --
 
 //Reads two integers from the keyboard.
 void get_numbers(int& input1, int& input2);
@@ -26,26 +27,24 @@ void order(int& n1, int& n2);
 //Assumes that output1 <= output2
 void give_results(int output1, int output2);
 
-
+ 
 int main()
 {
     int first_num = 0, second_num = 0;
 
-
-    ///////////////////////////////////First: Use this set of function calls to change the order of values ALL THE TIME
+    // First: Use this set of function calls to change the order of input values, unconditionally
     get_numbers(first_num, second_num);
     swap_values(first_num, second_num);
     show_results(first_num, second_num);
 
-    //////////////////////////////////Next: Use this set of function calls to change the order of values Only to achieve first_num < second_num
+    // Next: Use this set of function calls to change the order of values Only to achieve first_num < second_num
     get_numbers(first_num, second_num);
     order(first_num, second_num);
     give_results(first_num, second_num);
 
-
-
     return 0;
 }
+
 
 //function that reads inputs
 void get_numbers(int& input1, int& input2)
@@ -81,7 +80,6 @@ void order(int& n1, int& n2)
 //function to show results in increasing order
 void give_results(int output1, int output2)
 {
-
     cout << "In increasing order the numbers are: "
         << output1 << " " << output2 << endl;
 }
