@@ -62,6 +62,7 @@ int main()
     int lc = 1;         // incremented until it reaches total months in loan 
     
     // Table header
+    //        123 123456789012 123456789012 123456789012
     cout << "--------------------------------------------" << endl;
     cout << "|Mth|  Int Pmt.  |  Pr Pmt.   |  Rem Bal.  |" << endl;
     cout << "--------------------------------------------" << endl;
@@ -76,7 +77,7 @@ int main()
         setfill('.');
 
         cout << setfill(' ') << setw(3) << lc;
-        cout << "  $" << setfill(' ') << setw(10) << ip;
+        cout << "  $"    << setfill(' ') << setw(10) << ip;
         cout << "  $" << setfill(' ') << setw(10) << pp;
         cout << "  $" << setfill(' ') << setw(10) << rm << endl;
         
