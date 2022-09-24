@@ -30,7 +30,7 @@ int main()
     int lc;                 // Loop control 
     double avg=0.0;         // To calculate average of random numbers
     double a;               // To store the calculated average of random numbers
-    double std=0.0;         // To calculate Std Deviation
+    double std=0.0;         // To calculate Std Deviation (STDEV)
     int std_n;              // To store random numbers READ from a file 
 
 
@@ -61,20 +61,10 @@ int main()
     // Generate the n random numbers, and write to stream / file
     srand(time(0));                 // Seed the rand() funtion with the current time
     
-    /*
-    //             1234
-    //                 12345 
-    out_stream << "-----------" << endl;
-    out_stream << "| n | Rnd |" << endl;
-    out_stream << "-----------" << endl;
-    */
-
     while (lc > 0)                  // Counting down
     {
         r = rand() % 1000;          // Generate random number between 0 and 1000
         out_stream << r << endl;    // Write rn to file, and a new line / carriage return
-        // out_stream << setfill(' ') << setw(4) << lc;
-        // out_stream << setfill(' ') << setw(5) << r << endl;    // Write rn to file, and a new line / carriage return
         avg += r;                   // running sum of rn's
 
         cout << "Random number is: " << r;          // DELETE LATER - TEST ONLY Print rn to screen 
@@ -85,7 +75,7 @@ int main()
     
     // Calculate the average of all random numbers, write to end of stream / file
     avg /= n;                                       // calculate average of all the rn's
-    out_stream << endl << "Avg: " << avg << endl;   // write avg of rn's to file
+    out_stream << endl << "  AVG of above " << n << " random numbers : " << avg << endl;   // write avg of rn's to file
     
     cout << "Average: " << avg << endl;             // Print average of all rn's to screen 
     
@@ -101,13 +91,13 @@ int main()
 
     // Prepare variables for READ loop 
     a = avg;                        // Store average of random numbers, from PART 1.  This is the "A" in the STD formula
-    avg = 0;                        // reset average to zero before using it for STD calculation
+    avg = 0;                        // reset average to zero before using it for STDEV calculation
     lc = n;                         // reset loop counter to original "n"
 
     while (lc > 0)
     {
         in_stream >> std_n;         // read item from file
-        avg += pow((std_n - a), 2); // running sum for average for STD calc
+        avg += pow((std_n - a), 2); // running sum for average for STDEV calc
 
         cout << "std_n " << lc << " is: " << std_n << endl; // DELETE LATER - TEST ONLY Print the rn that was just read from file. 
 
@@ -116,9 +106,9 @@ int main()
 
     avg /= n;                       // calculate the average of all (n-A)^2
 
-    cout << " The STD is: " << sqrt(avg) << endl; // Print STD to the screen
+    cout << " The STDEV is: " << sqrt(avg) << endl; // Print STDEV to the screen
     
-    out_stream << endl << "STD: " << sqrt(avg) << endl;     // Write STD to the file.
+    out_stream << "STDEV of above " << n << " random numbers: " << sqrt(avg) << endl;     // Write STDEV to the file.
 
     in_stream.close();              // close the READ  stream
     out_stream.close();             // close the WRITE stream
