@@ -14,6 +14,7 @@
 #include <fstream>      //needed to include files
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
 
 
 int main()
@@ -59,12 +60,21 @@ int main()
 
     // Generate the n random numbers, and write to stream / file
     srand(time(0));                 // Seed the rand() funtion with the current time
+    
+    /*
+    //             1234
+    //                 12345 
+    out_stream << "-----------" << endl;
+    out_stream << "| n | Rnd |" << endl;
+    out_stream << "-----------" << endl;
+    */
 
     while (lc > 0)                  // Counting down
     {
         r = rand() % 1000;          // Generate random number between 0 and 1000
-
         out_stream << r << endl;    // Write rn to file, and a new line / carriage return
+        // out_stream << setfill(' ') << setw(4) << lc;
+        // out_stream << setfill(' ') << setw(5) << r << endl;    // Write rn to file, and a new line / carriage return
         avg += r;                   // running sum of rn's
 
         cout << "Random number is: " << r;          // DELETE LATER - TEST ONLY Print rn to screen 
@@ -77,7 +87,7 @@ int main()
     avg /= n;                                       // calculate average of all the rn's
     out_stream << endl << "Avg: " << avg << endl;   // write avg of rn's to file
     
-    cout << "Average: " << avg << endl;             // DELETE LATER - TEST ONLY Print average of all rn's to screen 
+    cout << "Average: " << avg << endl;             // Print average of all rn's to screen 
     
     // -- PART 2: STANDARD DEVIATION --
 
