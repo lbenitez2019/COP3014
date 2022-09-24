@@ -34,7 +34,7 @@ int main()
         cin >> a;
         
         
-        int lc2 = a + 20; // inner loop control = input age + 10 years. 
+        int lc2 = a + 10; // inner loop control = input age + 10 years. 
         
         // Table Header
         cout << "---------------------------------------------" << endl;
