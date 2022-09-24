@@ -33,9 +33,10 @@ int main()
     double std=0.0;         // To calculate Std Deviation (STDEV)
     int std_n;              // To store random numbers READ from a file 
 
-
-    // -- PART 1: RANDOM NUMBERS --
-
+    // --------------------------------
+    // -- PART 1: RANDOM NUMBERS     --
+    // --------------------------------
+    
     // Open WRITE stream to file rn.dat
     out_stream.open("rn.dat");      // open the stream / file for WRITING
     if (out_stream.fail())  
@@ -79,8 +80,10 @@ int main()
     
     cout << "Average: " << avg << endl;             // Print average of all rn's to screen 
     
+    // --------------------------------
     // -- PART 2: STANDARD DEVIATION --
-
+    // --------------------------------
+    
     // Open READ stream to file rn.dat
     in_stream.open("rn.dat");       // Open the same file/stream from PART 1, but for READING this time
     if (in_stream.fail())
