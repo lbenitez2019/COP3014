@@ -10,11 +10,11 @@
 //          
 
 
-#include <iostream>
-#include <fstream>      //needed to include files
-#include <cstdlib>
-#include <ctime>
-#include <iomanip>
+#include <cstdlib>      // Always needed
+#include <iostream>     // Needed for i/o streams
+#include <fstream>      // Needed to include files
+#include <ctime>        // Needed to seed rand()
+#include <iomanip>      // Needed for formatting
 
 
 int main()
