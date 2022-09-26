@@ -16,11 +16,10 @@
 #include <ctime>        // Needed to seed rand()
 #include <iomanip>      // Needed for formatting
 
-
 int main()
 {
     using namespace std;
-    
+
     // -- VARIABLE DECLARATIONS --
     
     ofstream out_stream;    // Stream for writing random numbers, and their average, into file rn.txt
@@ -45,7 +44,7 @@ int main()
         exit(3);                    // Indicate error code 3
     }
 
-    // Prompt user for number of random numbers
+    // Prompt user for total number of random numbers to be generated
     // Validate:  0 < n < 1000
     cout << "No. of random #'s to generate? (1..999): ";
     cin >> n;
@@ -64,20 +63,7 @@ int main()
     
     while (lc > 0)                  // Counting down
     {
-        r = rand() % 1000;          // Generate random number between 0 and 1000
-                                    
-                                    // Ensure  100 < rn < 1000
-        if (r < 100)                // check if rn is less than 100 
-        {
-            if (r < 10)             // check if rn is les than 10
-            {
-                r *= 100;           // rn is less than 10, so multiply by 100 to make it > 100
-            }
-            else
-            {
-                r *= 10;            // rn is between 10 and 99, so multiply by 10 to make it > 100
-            }
-        }
+        r = rand() % 900 + 100;     // Generate random number between 100 and 1000
 
         out_stream << r << endl;    // Write rn to file, and a new line / carriage return
         avg += r;                   // running sum of rn's
