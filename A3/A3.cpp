@@ -65,6 +65,20 @@ int main()
     while (lc > 0)                  // Counting down
     {
         r = rand() % 1000;          // Generate random number between 0 and 1000
+                                    
+                                    // Ensure  100 < rn < 1000
+        if (r < 100)                // check if rn is less than 100 
+        {
+            if (r < 10)             // check if rn is les than 10
+            {
+                r *= 100;           // rn is less than 10, so multiply by 100 to make it > 100
+            }
+            else
+            {
+                r *= 10;            // rn is between 10 and 99, so multiply by 10 to make it > 100
+            }
+        }
+
         out_stream << r << endl;    // Write rn to file, and a new line / carriage return
         avg += r;                   // running sum of rn's
 
