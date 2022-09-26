@@ -63,7 +63,7 @@ int main()
     
     while (lc > 0)                  // Counting down
     {
-        r = rand() % 900 + 100;     // Generate random number between 100 and 1000
+        r = rand() % 900 + 100;     // Generate a random number between 100 and 1000
 
         out_stream << r << endl;    // Write rn to file, and a new line / carriage return
         avg += r;                   // running sum of rn's
