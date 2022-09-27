@@ -43,14 +43,14 @@ int main()
 
         while(a<=lc2)
         {
-        // Calc Hat Size
+        // Calculate Hat Size
         hs = w / h * 2.9;
 
-        // Calc Jacket Size
+        // Calculate Jacket Size
         af = ((a - 30) / 10);
         js = (h * w / 288.0) + (af / 8.0);
 
-        // Calc Waist Size
+        // Calculate Waist Size
         af = ((a - 28) / 2);
         ws = (w / 5.7) + (af / 10.0);
 
