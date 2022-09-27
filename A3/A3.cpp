@@ -58,7 +58,7 @@ int main()
         exit(7);                     // Indicate error 7
     }
 
-    // Generate the n random numbers, and write to stream / file
+    // Generate the n random numbers, and write to stream (and file)
     srand(time(0));                 // Seed the rand() funtion with the current time
     
     while (lc > 0)                  // Counting down
