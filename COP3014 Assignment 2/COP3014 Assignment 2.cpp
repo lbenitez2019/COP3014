@@ -67,6 +67,7 @@ int main()
     cout << "|Mth|  Int Pmt.  |  Pr Pmt.   |  Rem Bal.  |" << endl;
     cout << "--------------------------------------------" << endl;
 
+    system("PAUSE");
     // Display and tabulation loop 
     while (lc <= n)
     {
@@ -84,6 +85,6 @@ int main()
         lc++;           // increment loop counter (month)
     }
 
-
+    system("PAUSE");
     return 0;
 }
