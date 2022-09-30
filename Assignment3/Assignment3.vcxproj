@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\LucasBenitez_Assignment3\LucasBenitez_Assignment3\LucasBenitez_Assignment3.cpp" />
+    <ClCompile Include="LucasBenitez_Assignment3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
