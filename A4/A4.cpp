@@ -27,10 +27,13 @@ class cop3014
 		void set_q2_score(short score);
 		void set_me_score(short score);
 		void set_fe_score(short score);
-		short	 get_q1_score();
-		short	 get_q2_score();
-		short	 get_me_score();
-		short	 get_fe_score();
+		void set_znum(short znumber);
+
+		short get_q1_score();
+		short get_q2_score();
+		short get_me_score();
+		short get_fe_score();
+		short get_znum();
 
 	private:
 		// Student info
@@ -53,19 +56,15 @@ class cop3014
 		const double q1_w = .10;	// Quiz 1 weight for final grade
 		const double q2_w = .10;	// Quiz 2 weight for final grade
 		const double me_w = .30;	// Midterm Exam weight for final grade
-		const double fe_w = .5;		// Final Exam weight for final grade
+		const double fe_w = .50;	// Final Exam weight for final grade
 
 		// Variables to hold grades
-		double grade_n;				// Final grade, numeric/%
-		char grade_l;				// Final grade, letter/alpha
-		
-		struct tests				// To store grades
-		{
-			short q1;				// Holds score for Quiz 1
-			short q2;				// Holds score for Quiz 2
-			short me;				// Holds score for Midterm Exam
-			short fe;				// Holds score for Final Exam
-		};
+		double gr_course_n;			// Final course grade, numeric/%
+		char gr_course_l;			// Final grade, letter/alpha
+		short gr_q1;				// Holds score for Quiz 1
+		short gr_q2;				// Holds score for Quiz 2
+		short gr_me;				// Holds score for Midterm Exam
+		short gr_fe;				// Holds score for Final Exam
 
 };
 
@@ -76,7 +75,6 @@ int main()
 
 	
 	return 0;
-
 }
 
 
