@@ -54,7 +54,7 @@ int main()
         af = ((a - 28) / 2);
         ws = (w / 5.7) + (af / 10.0);
 
-        // Specify NO fixed notation or decimal point only for age
+        // Specify NO fixed notation or decimal point for age
         cout.unsetf(ios::fixed);
         cout.unsetf(ios::showpoint);
 
