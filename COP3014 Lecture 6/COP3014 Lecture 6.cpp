@@ -3,9 +3,13 @@ COP3014
 Lecture 06: Functions, call by value, library functions
 Date: 09/13/2022
 */
+// Compiler Directives
 #include <iostream>
 #include <cmath>
 #include <ctime>
+using namespace std;
+
+// Local declarations
 const double PI = 3.14159;          //global variable! All functions can use it
 double total_cost(int number_par, double price_par);
 //Computes the total cost, including 5% sales tax,
@@ -14,7 +18,7 @@ double area(double radius);
 //Returns the area of a circle with the specified radius.
 double volume(double radius);
 //Returns the volume of a sphere with the specified radius.
-using namespace std;
+
 int main()
 {
     //sample use of random number generators

@@ -28,22 +28,20 @@
 //  REQ10 - Test by generating multiple objects, and printing the student object’s record from COP3014.
 //
 
+
+// Includes and other compiler directives
 #include <iostream>
 using namespace std;
 
-//*********************************************************************
-// Class / Function prototypes for structures.
-//*********************************************************************
 
-// 
-// 
+// Class Definitions, function prototypes
+
 class cop3014
 {
 	public:
 		// -- Public functions --
 		void prompt_for_scores();
 		void display_report_card();
-		char calc_f_grade_lett();
 		bool validate_score(short score, short score_type);
 
 		// Just for testing/debbugging
@@ -71,6 +69,7 @@ class cop3014
 		char get_fcg_l_score();
 
 		// Specialty functions
+		char calc_f_grade_lett();
 		double calc_f_grade_num();
 		
 		

@@ -6,12 +6,12 @@ Taken from:  "Problem Solving with C++", Walter Savitch
 Date: 09/22/2022
 */
 
-
+// Compiler directives
 #include <iostream>
 #include <fstream>      //needed to include files
 #include <cstdlib>
-
 using namespace std;
+
 
 int main()
 {
