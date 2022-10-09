@@ -40,6 +40,18 @@ using namespace std;
 class cop3014
 {
 	public:
+		// -- Public functions --
+		void prompt_for_scores();
+		void display_report_card();
+		char calc_f_grade_lett();
+		bool validate_score(short score, short score_type);
+
+		// Just for testing/debbugging
+		void display_init_values();
+
+	private: 
+		// -- Private functions --
+
 		// setter functions
 		void set_znum(long int new_znumber);
 		bool set_q1_score(short score);
@@ -58,18 +70,16 @@ class cop3014
 		double get_fcg_n_score();
 		char get_fcg_l_score();
 
-		// other functions
+		// Specialty functions
 		double calc_f_grade_num();
-		char calc_f_grade_lett();
-		bool validate_score(short score, short score_type);
-
-	private:
-		// -- CLASS VARIABLES --
+		
+		
+		// -- Private variables  --
 		
 		// Student info
 		long int znumber = 99999999; // Student FAU Z-Number
 				
-		// Variables to hold grades
+		// Variables to hold grades (init values are 'special' for debug)
 		double gr_fcg_n = 999; 		// Final course grade, numeric/%
 		char gr_fcg_l = 'X';		// Final grade, letter/alpha
 		short gr_q1 = 999;			// Holds score for Quiz 1
@@ -77,7 +87,7 @@ class cop3014
 		short gr_me = 999;			// Holds score for Midterm Exam
 		short gr_fe = 999;			// Holds score for Final Exam
 
-		// -- CLASS CONSTANTS --
+		// -- Private constants --
 		
 		// Letter grade mapping to score
 		const short grade_a = 90;
@@ -106,65 +116,22 @@ class cop3014
 
 int main()
 {
+	// Variable declarations
+	cop3014 student1;
+
 	char lc = 'y';  // Outer loop control
 	while (lc == 'y' || lc == 'Y')
 	{
-				
-		// Variable declarations
-		long int new_znumber;
-		short new_score;
-		cop3014 student1;
+		// DEBUG ONLY - Displays initial values of cop3014 variable members
+		student1.display_init_values();
 
-		cout << "--- TEST init values ---" << endl;
-		cout << "Q1: " << student1.get_q1_score() << endl;
-		cout << "Q2: " << student1.get_q2_score() << endl;
-		cout << "ME: " << student1.get_me_score() << endl;
-		cout << "FE: " << student1.get_fe_score() << endl;
-		cout << "FG: " << student1.get_fcg_n_score() << endl;
-		cout << "FG: " << student1.get_fcg_l_score() << endl;
-		cout << "--- TEST init values ---" << endl;
-
-		// Prompt for and store Z-Number
-		cout << "Znumber (exactly 8 digits): ";
-		cin >> new_znumber;
-		student1.set_znum(new_znumber);
-
-		// Prompt for and store Quiz 1 Score
-		cout << "Quiz 1 score (0-10): ";
-		cin >> new_score;
-		student1.set_q1_score(new_score);
-		
-		// Prompt for and store Quiz 2 Score
-		cout << "Quiz 2 score (0-10): ";
-		cin >> new_score;
-		student1.set_q2_score(new_score);
-		
-		// Prompt for and store Midterm Exam Score
-		cout << "Midterm Exam score (0-100): ";
-		cin >> new_score;
-		student1.set_me_score(new_score);
-		
-		// Prompt for and store Final Exam Score
-		cout << "Final Exam score (0-100): ";
-		cin >> new_score;
-		student1.set_fe_score(new_score);
+		// Prompt for and store Z-Number and test scores
+		student1.prompt_for_scores();
 
 		// Display Z-Number, quiz/test scores and final grade to screen
-		cout << endl;
-		cout << "---------------------------" << endl;
-		cout << "Z-num         : " << student1.get_znum() << endl;
-		cout << "Q1 score      : " << student1.get_q1_score() << endl;
-		cout << "Q2 score      : " << student1.get_q2_score() << endl;
-		cout << "Midterm test  : " << student1.get_me_score() << endl;
-		cout << "Final test    : " << student1.get_fe_score() << endl;
-
-		// Calculate and display final course grade, numeric percent format
-		cout << "Final Grade   : " << student1.calc_f_grade_num() << "% ";
-		
-		// Calculate and display final course grade, letter grade format
-		cout << "/ " << student1.calc_f_grade_lett() << endl;
-		cout << "---------------------------" << endl;
+		student1.display_report_card();
 				
+		// Prompt user to continue or end
 		cout << "Continue? (y/n) ";
 		cin >> lc;
 	}
@@ -172,7 +139,70 @@ int main()
 	return 0;
 }
 
+void cop3014::prompt_for_scores()
+{
+	// Variable Declarations
+	long int new_znumber;
+	short new_score;
 
+	// Prompt for and store Z-Number
+	cout << "Znumber (exactly 8 digits): ";
+	cin >> new_znumber;
+	set_znum(new_znumber);
+
+	// Prompt for and store Quiz 1 Score
+	cout << "Quiz 1 score (0-10): ";
+	cin >> new_score;
+	set_q1_score(new_score);
+
+	// Prompt for and store Quiz 2 Score
+	cout << "Quiz 2 score (0-10): ";
+	cin >> new_score;
+	set_q2_score(new_score);
+
+	// Prompt for and store Midterm Exam Score
+	cout << "Midterm Exam score (0-100): ";
+	cin >> new_score;
+	set_me_score(new_score);
+
+	// Prompt for and store Final Exam Score
+	cout << "Final Exam score (0-100): ";
+	cin >> new_score;
+	set_fe_score(new_score);
+};
+
+void cop3014::display_init_values()
+{
+	// DEBUG ONLY - To get rid of compiler warnings
+	cout << "--- TEST init values ---" << endl;
+	cout << "Q1:" << get_q1_score() << " ";
+	cout << "Q2:" << get_q2_score() << " ";
+	cout << "ME:" << get_me_score() << " ";
+	cout << "FE:" << get_fe_score() << " ";
+	cout << "FG:" << get_fcg_n_score() << " ";
+	cout << "FG:" << get_fcg_l_score() << endl;
+	cout << "--- TEST init values ---" << endl << endl;
+};
+
+void cop3014::display_report_card()
+{
+	// Calculate final grade in numeric format and store to object
+	set_fcg_n_score(calc_f_grade_num());
+	
+	// Store final letter grade to object
+	set_fcg_l_score(calc_f_grade_lett());
+
+	// Display Report Card
+	cout << endl;
+	cout << "---------------------------" << endl;
+	cout << "Z Number      : Z-" << get_znum() << endl;
+	cout << "Q1 score      : " << get_q1_score() << endl;
+	cout << "Q2 score      : " << get_q2_score() << endl;
+	cout << "Midterm test  : " << get_me_score() << endl;
+	cout << "Final test    : " << get_fe_score() << endl;
+	cout << "Final Grade   : " << get_fcg_n_score() << " / " << get_fcg_l_score() << endl;
+	cout << "---------------------------" << endl;
+};
 
 long int cop3014::get_znum()
 {
@@ -228,11 +258,6 @@ short cop3014::get_fe_score()
 	return gr_fe;
 };
 
-
-double get_fcg_n_score();
-char get_fcg_l_score();
-
-
 void cop3014::set_fcg_n_score(double score) 
 {
 	gr_fcg_n = score;
@@ -257,10 +282,12 @@ char cop3014::get_fcg_l_score()
 	
 };
 
-
 double cop3014::calc_f_grade_num()
 {
+	// Variable Declarations
 	double grade=0;
+
+	// Calculate 
 	grade = (double) gr_q1 + (double) gr_q2 + (double) gr_me * (double) me_w + (double) gr_fe * (double) fe_w;
 	set_fcg_n_score(grade);
 
