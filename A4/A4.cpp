@@ -68,7 +68,7 @@ class cop3014
 		double get_fcg_n_score();
 		char get_fcg_l_score();
 
-		// Specialty functions
+		// Other/Special functions
 		char calc_f_grade_lett();
 		double calc_f_grade_num();
 		
