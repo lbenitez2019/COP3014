@@ -15,19 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="A4b.cpp">
+    <ClCompile Include="LucasBenitez_Assignment4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cop3014.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="cop3014_gets_sets.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="cop3014.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

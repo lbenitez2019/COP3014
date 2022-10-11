@@ -141,8 +141,8 @@ int main()
 void cop3014::prompt_for_scores()
 {
 	// Variable Declarations
-	long int new_znumber;
-	short new_score;
+	auto new_znumber = 99999999;
+	auto new_score = 100;
 
 	// Prompt for and store Z-Number
 	cout << "Znumber (exactly 8 digits): ";
