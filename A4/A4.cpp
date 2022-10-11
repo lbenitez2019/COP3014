@@ -10,18 +10,18 @@
 //			Quiz2
 //			Midterm Exam
 //			Final Exam
-//			Final Grade Avg %
+//			Final Grade Weighted Avg %
 //			Final Letter Grade
 //	REQ3  - Quizzes have max score of 10
 //  REQ4  - Midterm and Final have max score of 100
 //  REQ5  - Final grade weights: Quizzes 10% each, Midterm 30%, Final 50%
-//  REQ6  - cop3014 must have a VOID FUNCTION to: 
-//				- calculate weighted numeric average score for the entire course  
-//				- sets the corresponding member variable.  
-//  REQ7  - cop3014 must have a VOID FUNCTION to 
-//				- convert numeric average to a final letter grade
-//				- sets the corresponding member variable .  
-//  REQ8  - cop3014 must have get/set functions for all variables
+//  REQ6  - cop3014 must have get/set functions for all variables
+//	REQ7  - cop3014 must have void funct to 
+//					> calc weighted numeric avg for the entire course  
+//					> update the corresponding member variable.  
+//  REQ8  - cop3014 must have a VOID FUNCTION to 
+//					> convert numeric average to a final letter grade, and 
+//					> update the corresponding member variable.  
 //  REQ9  - cop3014 must have a function to display: 
 //				- z-number
 //				- All Quiz/Exam scores and Final Grade to the screen.
