@@ -19,11 +19,11 @@
 //  !  REQ11: create a int member representing the Z number with exactly 8 digits  
 //
 //  Class function Requirments: 
-//  !  REQ12: Must include getter and setter functions for all member variables
-//     REQ13: A void function to:
-//            - calculate the weighted average
-//            - store the weighted average
-//     REQ14: A void function to:
+//  !  REQ12: must include getter and setter functions for all class member variables
+//     REQ13: a void function to:
+//            - calculate the weighted average final grade
+//            - store the weighted average final grade
+//     REQ14: a void function to:
 //            - map weighted average to a letter grade
 //            - store the letter grade
 //     REQ15: a function to print out the students report card (all information)
