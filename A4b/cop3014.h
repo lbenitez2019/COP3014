@@ -12,6 +12,9 @@ public:
 	// Just for testing/debbugging
 	void display_init_values();
 
+	// Constructors
+	cop3014();		// Default contructor, does nothing.
+
 private:
 	// -- Private functions --
 

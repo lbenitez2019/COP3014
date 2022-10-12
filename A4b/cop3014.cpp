@@ -9,6 +9,20 @@ using namespace std;
 
 //***********************************************************
 // parent class	: cop3014
+// funct. name	: cop3014() 
+// purpose		: Default constructor
+// inputs		: none
+// outputs		: none
+// remarks		: Does nothing
+//***********************************************************
+cop3014::cop3014()
+{
+	cout << "hello from default contructor" << endl;
+};
+
+
+//***********************************************************
+// parent class	: cop3014
 // funct. name	: prompt_for_scores() 
 // purpose		: a. prompts user for student Z-number and grades
 //				: b. stores entered data to corr. variables
