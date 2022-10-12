@@ -48,14 +48,14 @@ class cop3014 {
         void print_report_card();                   // print student report card 
         void prompt_for_info();                     // prompt user for scores and znumber
 
-    private
-        int gr_q1;                                  // quiz 1 grade
-        int gr_q2;                                  // quiz 2 grade
-        int gr_me;                                  // midterm exam grade
-        int gr_fe;                                  // final exam grade
-        double gr_sgn;                              // final student course grade
-        char gr_sgl;                                // final student letter grade
-        long int znum;                              // student z number
+    private:
+        int gr_q1=999;                              // quiz 1 grade
+        int gr_q2=999;                              // quiz 2 grade
+        int gr_me=999;                              // midterm exam grade
+        int gr_fe=999;                              // final exam grade
+        double gr_sgn=999;                          // final student course grade
+        char gr_sgl='x';                            // final student letter grade
+        long int znum=99999999;                     // student z number
        
         const int q_max=10;                         // quiz max grade
         const int e_max=100;                        // exam max grade
@@ -204,24 +204,24 @@ bool cop3014::set_znum(long int z)
 //*************************************************************************************
 
 //calculate and store the final weighted average 
-void calc_avg_gr()
+void cop3014::calc_avg_gr()
 {
 
 };
 
 //map and store the final letter grade 
-void map_lett_gr()
+void cop3014::map_lett_gr()
 {
 
 };
 
 //print student report card 
-void print_report_card() 
+void cop3014::print_report_card()
 {
 
 };
 //prompt user for scores and znumber
-void prompt_for_info() 
+void cop3014::prompt_for_info()
 {
 
 };
