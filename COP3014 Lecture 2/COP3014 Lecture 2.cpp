@@ -2,7 +2,7 @@
 COP3014: Programmming II
 Lecture 02: Data Types and Arithmetic (Reference: "Problem Solving with C++",
 Walter Savitch)
-Instructor: Sareh Taebi
+Instructor: S. Taebi
 */
 #include <iostream>
 #include <string>     //needed for type string
@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    //program I : char practice
+    //program I : practicing char
     char symbol1, symbol2, symbol3;
     int number = (1 / 3) * 3;
     double c = 20;

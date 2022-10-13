@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Ignore Visual Studio Project file to avoid "Platform Toolset" incompatibilities
+*.vcxproj
