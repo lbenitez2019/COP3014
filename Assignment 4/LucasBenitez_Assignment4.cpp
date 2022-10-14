@@ -20,10 +20,10 @@
 //
 //  Class function Requirments: 
 //  !  REQ12: must include getter and setter functions for all class member variables
-//  !   REQ13: a void function to:
+//  !  REQ13: a void function to:
 //  !         - calculate the weighted average final grade
 //  !         - store the weighted average final grade
-//  !   REQ14: a void function to:
+//  !  REQ14: a void function to:
 //  !         - map weighted average to a letter grade
 //  !         - store the letter grade
 //     REQ15: a function to print out the students report card (all information)
@@ -31,7 +31,7 @@
 
 
 //*************************************************************************************
-// 
+// compiler directives
 //*************************************************************************************
 #include <cstdlib>                                  // Always needed
 #include <iostream>                                 // Always needed
@@ -39,7 +39,7 @@ using namespace std;
 
 
 //*************************************************************************************
-// 
+// class definition for cop3014
 //*************************************************************************************
 class cop3014 {
 
@@ -51,7 +51,7 @@ class cop3014 {
         void prompt_for_info();                     // prompt user for scores and znumber
 
         // constructor
-        cop3014();                                  // constructor (does nothing)
+        cop3014();                                  // basic constructor (does nothing)
 
     private:
         // private variables
@@ -272,32 +272,35 @@ void cop3014::print_report_card()
     cout << "Quiz 2 score       : " << get_q2() << endl;
     cout << "Midterm Exam score : " << get_me() << endl;
     cout << "Final Exam score   : " << get_fe() << endl;
-    cout << "Final Course Grade : " << get_sgn() << " / " << get_sgl() << endl;
+    cout << "Final Course Grade : " << get_sgn() << "% / " << get_sgl() << endl;
 
     cout << "-----------------------------------" << endl;
 };
+
 //prompt user for scores and znumber
 void cop3014::prompt_for_info()
 {
     // ask for znumber and store
-    cout << "Hello, welcome to program!";
-    cout << "\nPlease enter your znumber (exactly 8 digits):";
+    cout << "Please enter Z-number (8 digits): ";
     cin >> znum;
 
     // ask for and store quiz 1 grade
-    cout << "\nPlease enter Quiz number 1 grade (0-10):";
+    cout << "Please enter Quiz 1 score (0-10): ";
     cin >> gr_q1;
 
     // ask for and store quiz 2 grade
-    cout << "\nPlease enter Quiz number 2 grade (0-10):";
+    cout << "Please enter Quiz 2 score (0-10): ";
     cin >> gr_q2;
 
     // ask for and store midterm exam grade
-    cout << "\nPlease enter Midterm Exam grade (0-100):";
+    cout << "Please enter Midterm Exam score (0-100): ";
     cin >> gr_me;
 
     // ask for and store final exam grade
-    cout << "\nPlease enter Final Exam grade (0-100):";
+    cout << "Please enter Final Exam score (0-100): ";
     cin >> gr_fe;
+
+    cout << endl;
+    cout << endl;
 
 }

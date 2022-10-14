@@ -44,7 +44,7 @@ int main()                                                // Main function
     srand(time(0));                                       // Seed random number generation
     while (lc < N)
     {
-        rn = rand() % 900 + 100;                             // Scale the number rand of randomly generated number  
+        rn = rand() % 900 + 100;                          // Scale the number rand of randomly generated number  
         avg += rn;                                        // add last rn to running sum 
         cout << "Random number:" << rn << endl;           // Test print random number
         out_stream << rn << endl;                         // write rn to the file "rn.txt"
