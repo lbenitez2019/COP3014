@@ -13,7 +13,8 @@ public:
 	void display_init_values();
 
 	// Constructors
-	cop3014();		// Default contructor, does nothing.
+	cop3014();					// Default contructor, does nothing.
+	cop3014(int init_pattern);	// Alt. contructor.  Inits variables to init_pattern
 
 private:
 	// -- Private functions --

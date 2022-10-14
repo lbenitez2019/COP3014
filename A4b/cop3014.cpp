@@ -20,6 +20,26 @@ cop3014::cop3014()
 	cout << "hello from default contructor" << endl;
 };
 
+//***********************************************************
+// parent class	: cop3014
+// funct. name	: cop3014()
+// purpose		: Constructor
+// inputs		: none
+// outputs		: none
+// remarks		: Does nothing
+//***********************************************************
+cop3014::cop3014(int init_pattern)
+{
+	cout << "hello from alternative contructor" << endl;
+	gr_fcg_n = init_pattern; 		// Init numeric final course grade w. input
+	gr_fcg_l = 'Y';					// Init letter final grade to "Y"
+	gr_q1 = init_pattern;			// Init Quiz 1 w. input 
+	gr_q2 = init_pattern;			// Init Quiz 2 w. input
+	gr_me = init_pattern;			// Init Midterm Exam w. input
+	gr_fe = init_pattern;			// Init Final Exam w. input
+
+};
+
 
 //***********************************************************
 // parent class	: cop3014
@@ -242,6 +262,10 @@ char cop3014::calc_f_grade_lett()
 		set_fcg_l_score('F');
 		return 'F';
 	}
+
+	// If we got here, something's wrong	
+	cout << endl << "ERROR in mapping numeric grade to letter grade!!" << endl;
+	return 'X'; 
 
 }
 

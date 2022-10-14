@@ -38,7 +38,7 @@ using namespace std;
 int main()
 {
 	// Variable declarations
-	cop3014 student1;
+	cop3014 student1(888);
 
 	char lc = 'y';  // Outer loop control
 	while (lc == 'y' || lc == 'Y')
