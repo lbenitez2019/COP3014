@@ -2,9 +2,9 @@
 // Date : OCT-28-2022
 // Assignment: lab 2
 
-// 1 Generate a class called Money which represents amounts of U.S. currency
+// 1! Generate a class called Money which represents amounts of U.S. currency
 // 
-// 2 value is implemented  as  a  single  integer  value  that  represents  the  amount  of  money  as  if  it  were
+// 2! value is implemented  as  a  single  integer  value  that  represents  the  amount  of  money  as  if  it  were
 // converted to all pennies For example, $9.95 would be stored as the value 995.
 // 
 // 3 The class must have the following constructors:
@@ -14,7 +14,7 @@
 // then both dollarsand cents must be negative.
 // 
 // 3b Money(long dollars);
-// Initializes the object so its value represents $dollars.00.
+// Initializes the object so its value represents $dollars.00
 // 
 // 3c Money();
 // Initializes the object so its value represents $0.00.
@@ -28,13 +28,6 @@
 //	output One version takes an output stream reference argument, and the other version of
 //	output takes no arguments and sends its output to the screen
 // 
-//	Money laptop;
-//Laptop.output(cout);   //1
-
-//laptop.output();  //2 is the same as 1 (overloaded definition of output)
-
-//laptop.output(outs);     //send to any output stream (file)
-
 //6 The class has a getter function with the following prototype.It also has a setter function
 //that you can define.
 //double get_value() const;
@@ -49,42 +42,37 @@
 
 
 // Includes and other compiler directives
-#include <iostream>
+#include <iostream>	
+#include <fstream>
 using namespace std;
 
+	
 
 // Class Definitions, function prototypes
 
 class money
 {
 public:
+	int cents;
+	money(long newdollars, int newcents);
+	money(long newdollars);
+	money();
+
+	void output();
+	void output(ofstream& out_stream);
+
+	int get_cents() const;
+	int set_cents() const;
 
 
-
-
-
-
-
+	//friend functions
+	friend bool equal(money amount1, money amount2);
+	friend money add(int amount1, int amount2);
+	friend money subtract(int amount1, int amount2);
 
 private:
 
-
-	// getter functions
-
-
-
-	// Other/Special functions
-
-
-	// -- Private variables  --
-
-
-	// -- Private constants --
-
-
 };
-
-
 
 int main()
 {
