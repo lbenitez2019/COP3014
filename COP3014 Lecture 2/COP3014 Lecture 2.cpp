@@ -17,6 +17,17 @@ int main()
     double c = 20;
     double f;
 
+    srand(time(0));
+    int t = 0;
+
+    do {
+        cout << rand() % 100 + 0 << endl;
+    } while (t++ < 50);
+
+    system("PAUSE");
+
+    cout << "20%3 " << 20 % 3 << " 10/8: " << 10/8 << endl;
+
     // Example B
     f = (9 / 5) * c + 32.1;
     cout << "the temp is: " << f << endl;

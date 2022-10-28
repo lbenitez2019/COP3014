@@ -38,23 +38,27 @@ using namespace std;
 int main()
 {
 	// Variable declarations
-	cop3014 student1(888);
+	cop3014 section1[3]; // Make an array of 25 objects
+
+	// DEBUG ONLY - Displays initial values of cop3014 variable members
+	section1[0].display_init_values();
+	std::system("PAUSE");
 
 	char lc = 'y';  // Outer loop control
 	while (lc == 'y' || lc == 'Y')
 	{
-		// DEBUG ONLY - Displays initial values of cop3014 variable members
-		student1.display_init_values();
+		// Clear the console
+		std::system("CLS");
 
 		// Prompt for and store Z-Number and test scores
-		student1.prompt_for_scores();
+		section1[0].prompt_for_scores();
 
 		// Display Z-Number, quiz/test scores and final grade to screen
-		student1.display_report_card();
+		section1[0].display_report_card();
 
 		// Prompt user to continue or end
-		cout << "Continue? (y/n) ";
-		cin >> lc;
+		std::cout << "Continue? (y/n) ";
+		std::cin >> lc;
 	}
 
 	return 0;

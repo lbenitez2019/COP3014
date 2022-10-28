@@ -11,7 +11,7 @@ using namespace std;
 
 // Local declarations
 const double PI = 3.14159;          //global variable! All functions can use it
-double total_cost(int number_par, double price_par);
+double total_cost(int , double );
 //Computes the total cost, including 5% sales tax,
 //on number_par items at a cost of price_par each.
 double area(double radius);

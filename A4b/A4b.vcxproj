@@ -127,12 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="cop3014.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="A4b.cpp" />
     <ClCompile Include="cop3014.cpp" />
     <ClCompile Include="cop3014_gets_sets.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="cop3014.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
