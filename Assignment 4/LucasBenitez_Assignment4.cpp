@@ -6,27 +6,27 @@
 // 
 // Requirments: 
 //  Class variable Requirments: 
-//  !  REQ01: define a class called COP3014
-//  !  REQ02: must have member variables for 2 quizzes
-//  !  REQ03: each quiz has a grade of 0-10 points
-//  !  REQ04: must have member variables for a midterm and final exam
-//  !  REQ05: the midterm and final score of 0-100 points
-//  !  REQ06: must have member variable for final grade
-//  !  REQ07: final numeric grade is the wieghted average of quizzes and exams
-//  !  REQ08: weights for final grade: quizzes = 10% each, midterm = 30%, and final = 50%
-//  !  REQ09: must have member variable for student letter grade
-//  !  REQ10: grades 90+ are an A, 80-89 is B, 70-79 is C, 60-69 is D, and 59 and below F
-//  !  REQ11: create a int member representing the Z number with exactly 8 digits  
+//    REQ01: define a class called COP3014
+//    REQ02: must have member variables for 2 quizzes
+//    REQ03: each quiz has a grade of 0-10 points
+//    REQ04: must have member variables for a midterm and final exam
+//    REQ05: the midterm and final score of 0-100 points
+//    REQ06: must have member variable for final grade
+//    REQ07: final numeric grade is the wieghted average of quizzes and exams
+//    REQ08: weights for final grade: quizzes = 10% each, midterm = 30%, and final = 50%
+//    REQ09: must have member variable for student letter grade
+//    REQ10: grades 90+ are an A, 80-89 is B, 70-79 is C, 60-69 is D, and 59 and below F
+//    REQ11: create a int member representing the Z number with exactly 8 digits  
 //
 //  Class function Requirments: 
-//  !  REQ12: must include getter and setter functions for all class member variables
-//  !  REQ13: a void function to:
-//  !         - calculate the weighted average final grade
-//  !         - store the weighted average final grade
-//  !  REQ14: a void function to:
-//  !         - map weighted average to a letter grade
-//  !         - store the letter grade
-//     REQ15: a function to print out the students report card (all information)
+//    REQ12: must include getter and setter functions for all class member variables
+//    REQ13: a void function to:
+//           - calculate the weighted average final grade
+//           - store the weighted average final grade
+//    REQ14: a void function to:
+//           - map weighted average to a letter grade
+//           - store the letter grade
+//    REQ15: a function to print out the students report card (all information)
 
 
 
@@ -114,7 +114,7 @@ int main()
 // define basic constructor
 cop3014::cop3014()
 {
-    
+    //this constructor does nothing
 };     
 
 //*************************************************************************************
