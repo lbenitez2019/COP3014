@@ -1,5 +1,6 @@
 // Course: COP3014
-// Date : OCT-28-2022
+// Date : OCT-30-2022
+// Author: Lucas Benitez
 // Assignment: lab 2
 
 // 1 Generate a class called Money which represents amounts of U.S. currency
