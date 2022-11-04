@@ -64,6 +64,14 @@ public:
 	friend money add(money amount1, money amount2);
 	friend money subtract(money amount1, money amount2);
 
+	friend money operator + (money amount1, money amount2);	
+	friend money operator - (money amount1, money amount2);
+	friend bool operator == (money amount1, money amount2);
+	friend bool operator >= (money amount1, money amount2);
+	friend bool operator < (money amount1, money amount2);
+	friend bool operator > (money amount1, money amount2);
+	friend bool operator <= (money amount1, money amount2);
+
 private:
 	// variables
 	int cents;
@@ -107,6 +115,49 @@ int main()
 	x=subtract(value1, value2);
 	cout << "\nsubtract function: ";
 	x.output();
+
+		// Call and test overloaded operators
+	x=value1 + value2;
+	cout << "\n'+' operator: ";
+	x.output();	
+
+	x=value1 - value2;
+	cout << "\n'-' operator: ";
+	x.output();
+	
+	if (value1 == value2)
+	cout << "\n'==' operator: result not equal ";
+
+	if (value1 > value2)
+	cout << "\n'>' operator: result not equal ";
+
+	if (value1 >= value2)
+	cout << "\n'>=' operator: result not equal ";
+
+	if (value1 < value2)
+	cout << "\n'<' operator: result not equal ";
+
+	if (value1 <= value2)
+	cout << "\n'<=' operator: result not equal ";
+
+	
+	x=value1 - value2;
+	cout << "\n'-' operator: ";
+	x.output();
+	
+	x=value1 - value2;
+	cout << "\n'-' operator: ";
+	x.output();
+	
+	x=value1 - value2;
+	cout << "\n'-' operator: ";
+	x.output();
+	
+	x=value1 - value2;
+	cout << "\n'-' operator: ";
+	x.output();
+
+
 
 	// Open WRITE stream to file money.txt
 	out_stream.open("money.txt");      // open the stream for WRITING  
@@ -186,6 +237,58 @@ money add(money amount1, money amount2)
 
 	x.cents = amount1.cents + amount2.cents;
 	return x;
+	
+};
+
+money operator + (money amount1, money amount2)
+{
+	// 'add' - returns a 'money' object whose value is the sum of the values of its two input arguments
+	money x;
+
+	x.cents = amount1.cents + amount2.cents;
+	return x;
+	
+};
+
+money operator - (money amount1, money amount2)
+{
+	money x;
+
+	x.cents = amount1.cents - amount2.cents;
+	return x;
+	
+};
+
+bool operator == (money amount1, money amount2)
+{
+
+	 return (amount1.cents == amount2.cents);
+	
+};
+
+bool operator > (money amount1, money amount2)
+{
+
+	 return (amount1.cents > amount2.cents);
+	
+};
+
+bool operator >= (money amount1, money amount2)
+{
+
+	 return (amount1.cents >= amount2.cents);
+	
+};
+bool operator < (money amount1, money amount2)
+{
+
+	 return (amount1.cents < amount2.cents);
+	
+};
+bool operator <= (money amount1, money amount2)
+{
+
+	 return (amount1.cents <= amount2.cents);
 	
 };
 
