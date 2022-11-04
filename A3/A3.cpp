@@ -16,10 +16,38 @@
 #include <ctime>        // Needed to seed rand()
 #include <iomanip>      // Needed for formatting
 
+#define LOG(x) std::cout << x << std::endl
+
+void increment(int& value)
+{
+    value++;
+};
+
 int main()
 {
     using namespace std;
 
+    // Testing pointers, from The Cherna yt vid on pointers BEGIN
+    int var = 8;
+    int* ptr = &var;
+    *ptr = 10;
+    LOG(var);
+    
+    char* buffer = new char[8];
+    memset(buffer, 0xaa, 8);
+
+
+    int aa = 5;
+    int& ref = aa;
+    ref = 99;
+    LOG(aa);
+    
+    increment(aa);
+    
+    std::cin.get();
+    // Testing pointers, from The Cherna yt vid on pointers END
+
+    delete[] buffer;
     // -- VARIABLE DECLARATIONS --
     
     ofstream out_stream;    // Stream for writing random numbers, and their average, into file rn.txt
