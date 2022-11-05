@@ -123,17 +123,17 @@ void COP3014::compute_letterGrade(char new_letterGrade)
         new_letterGrade = 'A';
         letterGrade = new_letterGrade;
     }
-    else if ((avg <= 89) && (avg >= 80))
+    else if ((avg < 90) && (avg >= 80))
     {
         new_letterGrade = 'B';
         letterGrade = new_letterGrade;
     }
-    else if ((avg <= 79) && (avg >= 70))
+    else if ((avg < 80) && (avg >= 70))
     {
         new_letterGrade = 'C';
         letterGrade = new_letterGrade;
     }
-    else if ((avg <= 69) && (avg >= 60))
+    else if ((avg < 70) && (avg >= 60))
     {
         new_letterGrade = 'D';
         letterGrade = new_letterGrade;
