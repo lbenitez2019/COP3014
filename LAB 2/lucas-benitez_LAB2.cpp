@@ -89,7 +89,7 @@ int main()
 	ifstream in_stream;
 
 	// money objects
-	money value1(10,2);
+	money value1(3,0);
 	money value2(3);
 	money value3;
 	money x(6);
@@ -104,30 +104,37 @@ int main()
 	cout << "\ntest constructor with 1 input parameter. ";
 	x.output();
 
+	cout << "-----------------------------------------------------" << endl;
+	cout << "Testing with: value1=" << value1.get_cents() << " and value2=" << value2.get_cents() << endl;
+	cout << "-----------------------------------------------------" << endl << endl;
+
 	// Call and test 'equal' function
-	equal(value1, value2);
+	if(equal(value1, value2))
+		cout << "equal() function: value1 and value 2 are equal " << endl << endl;
+	else
+		cout << "equal() function: value1 and value 2 are NOT equal " << endl << endl;
 	
 	// Call and test 'add' function
 	x=add(value1, value2);
-	cout << "\nadd function: ";
-	x.output();
+	cout << "add() function, value1 + value 2: ";
+	x.output(); cout << endl;
 
 	// Call and test 'subtract' function
 	x=subtract(value1, value2);
-	cout << "\nsubtract function: ";
-	x.output();
+	cout << "subtract() function, value1 - value 2: ";
+	x.output(); cout << endl;
 
 		// Call and test overloaded operators
 	x=value1 + value2;
-	cout << "\n'+' operator: ";
+	cout << "\n'+' operator, value1 + value2: ";
 	x.output();	
 
 	x=value1 - value2;
-	cout << "\n'-' operator: ";
+	cout << "\n'-' operator, value1 - value2: ";
 	x.output();
 	
 	if (value1 == value2)
-		cout << endl << "'==' operator: " << value1.get_cents() << " == " << value2.get_cents() << endl;
+		cout << endl << "'==' operator : " << value1.get_cents() << " == " << value2.get_cents() << endl;
 	else
 		cout << endl << "'==' operator: " << value1.get_cents() << " NOT == " << value2.get_cents() << endl;	
 
@@ -215,12 +222,10 @@ bool equal(money const amount1, money const amount2)
 	// represent equal amounts of money
 	if (amount1.cents == amount2.cents)
 	{
-		cout << "\ntest equal function: objects are equal " << endl;
 		return 1;
 	}
 	else
 	{
-		cout << "\ntest equal function: objects are not equal " << endl;
 		return 0;
 	}
 	
