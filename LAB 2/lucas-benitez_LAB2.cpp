@@ -72,13 +72,14 @@ public:
 	friend bool operator > (money amount1, money amount2);
 	friend bool operator <= (money amount1, money amount2);
 
+	// getters and setters
+	int get_cents();
+	void set_cents(int temp_cents);
+
 private:
 	// variables
 	int cents;
 	
-	// getters and setters
-	int get_cents();
-	void set_cents(int temp_cents);
 };
 
 int main()
@@ -126,36 +127,31 @@ int main()
 	x.output();
 	
 	if (value1 == value2)
-	cout << "\n'==' operator: result not equal ";
+		cout << endl << "'==' operator: " << value1.get_cents() << " == " << value2.get_cents() << endl;
+	else
+		cout << endl << "'==' operator: " << value1.get_cents() << " NOT == " << value2.get_cents() << endl;	
 
 	if (value1 > value2)
-	cout << "\n'>' operator: result not equal ";
-
+		cout << endl << "'>' operator: " << value1.get_cents() << " > " << value2.get_cents() << endl;
+	else
+		cout << endl << "'>' operator: " << value1.get_cents() << " NOT > " << value2.get_cents() << endl;
+	
 	if (value1 >= value2)
-	cout << "\n'>=' operator: result not equal ";
-
+		cout << endl << "'>=' operator: " << value1.get_cents() << " >= " << value2.get_cents() << endl;
+	else
+		cout << endl << "'>=' operator: " << value1.get_cents() << " NOT >= " << value2.get_cents() << endl;
+	
 	if (value1 < value2)
-	cout << "\n'<' operator: result not equal ";
-
+		cout << endl << "'<' operator: " << value1.get_cents() << " < " << value2.get_cents() << endl;
+	else
+		cout << endl << "'<' operator: " << value1.get_cents() << " NOT < " << value2.get_cents() << endl;
+	
 	if (value1 <= value2)
-	cout << "\n'<=' operator: result not equal ";
+		cout << endl << "'<=' operator: " << value1.get_cents() << " <= " << value2.get_cents() << endl;
+	else
+		cout << endl << "'<=' operator: " << value1.get_cents() << " NOT <= " << value2.get_cents() << endl;
 
-	
-	x=value1 - value2;
-	cout << "\n'-' operator: ";
-	x.output();
-	
-	x=value1 - value2;
-	cout << "\n'-' operator: ";
-	x.output();
-	
-	x=value1 - value2;
-	cout << "\n'-' operator: ";
-	x.output();
-	
-	x=value1 - value2;
-	cout << "\n'-' operator: ";
-	x.output();
+
 
 
 
