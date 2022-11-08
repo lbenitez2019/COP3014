@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Midterm Prep", "Midterm Pre
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LAB 2", "LAB 2\LAB 2.vcxproj", "{B32EC5C3-CBE9-43A5-8117-FC7AF384F00C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "COP3014 Lecture 15", "COP3014 Lecture 15\COP3014 Lecture 15.vcxproj", "{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -211,6 +213,14 @@ Global
 		{B32EC5C3-CBE9-43A5-8117-FC7AF384F00C}.Release|x64.Build.0 = Release|x64
 		{B32EC5C3-CBE9-43A5-8117-FC7AF384F00C}.Release|x86.ActiveCfg = Release|Win32
 		{B32EC5C3-CBE9-43A5-8117-FC7AF384F00C}.Release|x86.Build.0 = Release|Win32
+		{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}.Debug|x64.ActiveCfg = Debug|x64
+		{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}.Debug|x64.Build.0 = Debug|x64
+		{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}.Debug|x86.ActiveCfg = Debug|Win32
+		{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}.Debug|x86.Build.0 = Debug|Win32
+		{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}.Release|x64.ActiveCfg = Release|x64
+		{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}.Release|x64.Build.0 = Release|x64
+		{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}.Release|x86.ActiveCfg = Release|Win32
+		{3AF51A4A-3CC4-44B9-8FA4-0FE68AB45BE3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
