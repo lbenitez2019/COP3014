@@ -23,12 +23,15 @@ public:
 
 	//overloaded operators
 	friend rational operator + (rational a, rational b);
-	friend rational operator - (rational a, rational b);
+	friend rational operator - (rational a, rational b);	
+	friend rational operator * (rational a, rational b);
+	friend rational operator / (rational a, rational b);
 	friend bool operator == (rational a, rational b);
 	friend bool operator >= (rational a, rational b);
 	friend bool operator <  (rational a, rational b);
 	friend bool operator >  (rational a, rational b);
 	friend bool operator <= (rational a, rational b);
+	friend rational operator - (rational a);
 private:
 	// -- Private functions --
 
@@ -57,6 +60,66 @@ int main()
 
 	x3 = x1 + x2;
 	x3.print_endl();
+
+	//testing > boolean function
+	x1.print(); cout << " > "; x2.print();
+	if (x1 > x2)
+		cout << ": TRUE" << endl;
+	else
+		cout << ": FALSE" << endl;
+
+	//testing < boolean function
+	x1.print(); cout << " < "; x2.print();
+	if (x1 < x2)
+		cout << ": TRUE" << endl;
+	else
+		cout << ": FALSE" << endl;
+
+	//testing >= boolean function
+	x1.print(); cout << " >= "; x2.print();
+	if (x1 >= x2)
+		cout << ": TRUE" << endl;
+	else
+		cout << ": FALSE" << endl;
+	
+	//testing <= boolean function
+	x1.print(); cout << " <= "; x2.print();
+	if (x1 <= x2)
+		cout << ": TRUE" << endl;
+	else
+		cout << ": FALSE" << endl;
+		
+	//testing == boolean function
+	x1.print(); cout << " == "; x2.print();
+	if (x1 == x2)
+		cout << ": TRUE" << endl;
+	else
+		cout << ": FALSE" << endl;
+		
+	//testing unary - overloaded function
+	x1.print(); cout << " unary - = "; 
+	-x1;
+	x1.print_endl();	
+	
+	x2.print(); cout << " unary - = "; 
+	-x2;
+	x2.print_endl();
+
+	//testing + overloaded function
+	x3 = x1 + x2;
+	x1.print(); cout << " + "; x2.print(); cout << " = "; x3.print(); cout << endl;
+	
+	//testing - overloaded function
+	x3 = x1 - x2;
+	x1.print(); cout << " - "; x2.print(); cout << " = "; x3.print(); cout << endl;	
+
+	//testing * overloaded function
+	x3 = x1 * x2;
+	x1.print(); cout << " * "; x2.print(); cout << " = "; x3.print(); cout << endl;
+
+	//testing / overloaded function
+	x3 = x1 / x2;
+	x1.print(); cout << " / "; x2.print(); cout << " = "; x3.print(); cout << endl;
 
 	return 0;
 }
@@ -102,4 +165,73 @@ rational operator + (rational x, rational y)
 
 	return temp;
 
+};
+
+//overloaded operator function definitions
+rational operator - (rational x, rational y)
+{
+	rational temp;
+    
+	temp.n = (x.n * y.d - x.d * y.n);
+	temp.d = (x.d * y.d);
+
+	return temp;
+};
+
+//overloaded operator function definitions
+bool operator == (rational x, rational y)
+{
+	return (x.n * y.d) == (y.n * x.d);
+};
+
+//overloaded operator function definitions
+bool operator >= (rational x, rational y)
+{
+	return (x.n * y.d) >= (y.n * x.d);
+};
+
+//overloaded operator function definitions
+bool operator > (rational x, rational y)
+{
+	return (x.n * y.d) > (y.n * x.d);
+};
+
+//overloaded operator function definitions
+bool operator < (rational x, rational y)
+{
+	return (x.n * y.d) < (y.n * x.d);
+};
+
+//overloaded operator function definitions
+bool operator <= (rational x, rational y)
+{
+	return (x.n * y.d) <= (y.n * x.d);
+}
+
+//overloaded operator function definitions
+rational operator-(rational x)
+{
+	x.n = x.n * -1;
+	x.d = x.d * -1;
+	return x;
+};
+
+//overloaded operator function definitions
+rational operator * (rational x, rational y)
+{
+	rational temp;
+
+	temp.n = (x.n * y.n);
+	temp.d = (x.d * y.d);
+	return temp;
+};
+
+//overloaded operator function definitions
+rational operator / (rational x, rational y)
+{
+	rational temp;
+
+	temp.n = (x.n * y.d);
+	temp.d = (y.n * y.d);
+	return temp;
 };
