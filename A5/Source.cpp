@@ -5,6 +5,7 @@
 
 // Includes and other compiler directives
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 // Class Definitions, function prototypes
@@ -20,6 +21,10 @@ public:
 
 	void print();
 	void print_endl();
+
+	// insertion / extraction operators overloaded functions
+	friend ofstream& operator << (ofstream& output, rational& x);
+	friend ifstream& operator >> (ifstream& input, rational& x);	
 
 	//overloaded operators
 	friend rational operator + (rational a, rational b);
@@ -53,6 +58,10 @@ int main()
 	rational x1(9);
 	rational x2(1,7);
 	rational x3;
+
+	//filestream declarations
+	ofstream output;
+	ifstream input;
 
 	x1.print_endl();
 	x2.print_endl();
@@ -98,12 +107,14 @@ int main()
 		
 	//testing unary - overloaded function
 	x1.print(); cout << " unary - = "; 
-	-x1;
+	x1 = -x1;
 	x1.print_endl();	
+	x1 = -x1;
 	
 	x2.print(); cout << " unary - = "; 
-	-x2;
+	x2 = -x2;
 	x2.print_endl();
+	x2 = -x2;
 
 	//testing + overloaded function
 	x3 = x1 + x2;
@@ -120,6 +131,14 @@ int main()
 	//testing / overloaded function
 	x3 = x1 / x2;
 	x1.print(); cout << " / "; x2.print(); cout << " = "; x3.print(); cout << endl;
+
+	output.open("rational_out.txt");
+	output << "test";
+
+	input.open("rational_in.txt");
+	input >> x1;
+	x1.print();
+
 
 	return 0;
 }
@@ -211,8 +230,8 @@ bool operator <= (rational x, rational y)
 //overloaded operator function definitions
 rational operator-(rational x)
 {
-	x.n = x.n * -1;
-	x.d = x.d * -1;
+	x.n = x.n * - 1;
+	x.d = x.d * - 1;
 	return x;
 };
 
@@ -234,4 +253,22 @@ rational operator / (rational x, rational y)
 	temp.n = (x.n * y.d);
 	temp.d = (y.n * y.d);
 	return temp;
+};
+
+ofstream& operator << (ofstream& output, rational& x)
+{
+	output << x.n << "/" << x.d;
+	return output;
+};
+
+
+ifstream& operator >> (ifstream& input, rational& x)
+{
+	char c;
+
+	input >> x.n;
+	input >> c;
+	input >> x.d;
+
+	return input;
 };

@@ -7,9 +7,9 @@
 //          REQ3b - Store the average of the random numbers at the end of file "rn.dat"
 //          REQ4a - Display the Std. Dev. of the random numbers in "rn.dat" to screen
 //          REQ4b - Store the Std. Dev. of the random numbers at the end of "rn.dat"
-//          
+//             
 
-
+ 
 #include <cstdlib>      // Always needed
 #include <iostream>     // Needed for i/o streams
 #include <fstream>      // Needed to include files
