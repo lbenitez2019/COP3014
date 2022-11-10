@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="A3.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="rn.dat" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

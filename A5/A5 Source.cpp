@@ -23,8 +23,8 @@ public:
 	void print_endl();
 
 	// insertion / extraction operators overloaded functions
-	friend ofstream& operator << (ofstream& output, rational& x);
-	friend ifstream& operator >> (ifstream& input, rational& x);	
+	friend ostream& operator << (ostream& output, rational& x);
+	friend istream& operator >> (istream& input, rational& x);	
 
 	//overloaded operators
 	friend rational operator + (rational a, rational b);
@@ -111,7 +111,7 @@ int main()
 	x1.print_endl();	
 	x1 = -x1;
 	
-	x2.print(); cout << " unary - = "; 
+	x2.print(); cout << " unary - = ";
 	x2 = -x2;
 	x2.print_endl();
 	x2 = -x2;
@@ -132,10 +132,20 @@ int main()
 	x3 = x1 / x2;
 	x1.print(); cout << " / "; x2.print(); cout << " = "; x3.print(); cout << endl;
 
-	output.open("rational_out.txt");
-	output << "test";
+	output.open("rational1.txt");
+	if (output.fail())
+	{
+		cout << "Could not open output file." << endl;
+		exit(7);                    // Indicate error code 3
+	}
+	output << "testing 123";
 
-	input.open("rational_in.txt");
+	input.open("rational2");
+	if (input.fail())
+	{
+		cout << "Could not open input file." << endl;
+		exit(3);                    // Indicate error code 3
+	}
 	input >> x1;
 	x1.print();
 
@@ -255,14 +265,14 @@ rational operator / (rational x, rational y)
 	return temp;
 };
 
-ofstream& operator << (ofstream& output, rational& x)
+ostream& operator << (ostream& output, rational& x)
 {
 	output << x.n << "/" << x.d;
 	return output;
 };
 
 
-ifstream& operator >> (ifstream& input, rational& x)
+istream& operator >> (istream& input, rational& x)
 {
 	char c;
 
